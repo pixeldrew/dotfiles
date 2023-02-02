@@ -1,0 +1,29 @@
+[pull]
+	rebase = false
+[core]
+	excludesfile = /Users/dfoehn/.gitignore_global
+	pager = delta
+	pager = delta
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[mergetool "idea"]
+        cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[difftool "idea"]
+        cmd = idea diff \"$LOCAL\" \"$REMOTE\"
+[mergetool "vscode"]
+        cmd = code --wait $MERGED
+[merge]
+        conflictStyle = diff3
+[diff]
+[user]
+	name = Drew Foehn
+	email = drew.foehn@publicissapient.com
+	signingkey = AE48992F8A203883997BE63F19B0C3D2CB9D6905
+[credential]
+	helper = osxkeychain
